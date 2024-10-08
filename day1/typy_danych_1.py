@@ -51,3 +51,27 @@ print(f"""
 # Sprawdzenie zmiennej 36.6 47
 # "47
 #     36.6"
+
+# typ logiczny
+# prawda fałsz
+# True False -  z dużej litery
+# 1 - prawda, 0 - fałsz
+
+czy_znasz_pythona = False
+print(czy_znasz_pythona)  # False
+print(type(czy_znasz_pythona))  # <class 'bool'>, typ logiczny
+
+print(int(True))  # 1
+print(int(False))  # 0
+
+print(bool(1))  # bool() rzutowanie na typ logiczny, True
+print(bool(100))  # True
+print(bool(-10))  # True
+print(bool("radek"))  # True
+
+print(bool(0))  # False
+print(bool(""))  # False
+print(bool(None))  # False, None - nic, stan nieokreslony, odpowiednik null w innych systemach
+
+print(bool(" "))  # True
+print(bool())  # False
