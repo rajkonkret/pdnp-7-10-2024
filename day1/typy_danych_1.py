@@ -75,3 +75,33 @@ print(bool(None))  # False, None - nic, stan nieokreslony, odpowiednik null w in
 
 print(bool(" "))  # True
 print(bool())  # False
+
+# działąnia logiczne
+# and -> i
+# Expression    Evaluates to
+# True and True    True
+# True and False    False
+# False and True    False
+# False and False    False
+# The or Operator’s Truth Table:
+#
+print(False and True)  # False
+print(False and False)  # False
+
+# or -> lub
+# Expression    Evaluates to
+# True or True    True
+# True or False    True
+# False or True    True
+# False or False    False
+# The not Operator’s Truth Table:
+#
+
+print(False or True)  # True
+print(False or False)  # False
+
+# negacja
+# Expression    Evaluates to
+# not True    False
+# not False   True
+print(not True)  # False

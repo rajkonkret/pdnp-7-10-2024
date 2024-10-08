@@ -92,7 +92,7 @@ The not Operator’s Truth Table:
 
 Expression    Evaluates to
 not True    False
-not False
+not False   True
 
 Dla daty:
 %Y: Rok z pełną liczbą cyfr, np. "1989", "2023".
