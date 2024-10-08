@@ -44,12 +44,42 @@ dict_small.update([('y', 3), ('z', 6)])
 print(dict_small)  # {'x': 2, 'y': 3, 'z': 6}
 
 # input() - pobiera dane od użytkownika, zwraca stringa
-tekst = input("Podaj imię")
-print(type(tekst))
-print(tekst)
+# tekst = input("Podaj imię")
+# print(type(tekst))
+# print(tekst)
 # Podaj imięRadek
 # <class 'str'>
 # Radek
 # Podaj imię12345
 # <class 'str'>
 # 12345
+
+# aplikacje kalkulator
+# pobrac dwie liczby -> input() x 2
+# wyswietlic wynik działania -> print()
+
+# a = input("Podaj pierwszą liczbę")  # str
+# b = float(input("Podaj pierwszą liczbę"))
+# print(int(a) + b)  # 11.0
+# ctrl / - komentarz
+# Podaj pierwszą liczbę5
+# Podaj pierwszą liczbę6
+# 11.0
+
+# napisać aplikacje słownik
+# pol - ang
+# zdefiniowany słownik
+# wyświetlic klucze
+# pobrać słowo do przetłumaczenia
+# wyswielic wartośc dla klucza
+pol_ang = {'kot': 'cat', 'pies': 'dog', 'dach': 'roof'}
+print("Mam takie słowa:", pol_ang.keys())
+odp = input("Podaj słówko do przetłumaczenia")
+print(pol_ang[odp.lower().replace(" ", "")])
+print(pol_ang.get(odp.lower().strip()))
+print(pol_ang.get(odp.lower().strip(), "nie mo"))
+# Mam takie słowa: dict_keys(['kot', 'pies', 'dach'])
+# Podaj słówko do przetłumaczeniaK o t
+# cat
+# None
+# nie mo
