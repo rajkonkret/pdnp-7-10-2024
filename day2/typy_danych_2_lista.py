@@ -77,3 +77,5 @@ print(lista)  # ['Radek', 'Marcin', 'Tomek', 'Mikołaj', 'Ania', 'Magda', 'Zenek
 # usunięcie po indeksie, zwraca co usunełą
 print(lista.pop(5))  # Magda
 print(lista)
+print(lista.pop(-2))  # Ania
+print(lista.pop())  # Zenek, ostatni element z listy
