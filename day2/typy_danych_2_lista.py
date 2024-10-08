@@ -52,3 +52,28 @@ print(lista_15)  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 print(lista_15[0:15:2])  # [start:stop:step], [0, 2, 4, 6, 8, 10, 12, 14]
 print(list(range(0, 15, 2)))  # [0, 2, 4, 6, 8, 10, 12, 14]
 print(lista_15[-10])  # liczba 5
+
+# nadpisanie elemntu listy
+lista[3] = "Mikołaj"
+print(lista)  # ['Radek', 'Zenek', 'Tomek', 'Mikołaj', 'Ania', 'Magda']
+
+# dopisanie elementu do listy na konkretnym miejscu
+lista.insert(1, "Marcin")
+print(lista)  # ['Radek', 'Marcin', 'Zenek', 'Tomek', 'Mikołaj', 'Ania', 'Magda']
+print(len(lista))  # 7
+
+# sprawdzanie indeksu dla elementu, indeks pierwszego wystąpienia
+print(lista.index("Tomek"))  # indeks numer 3 (miejsce 4)
+
+# usunięcie elementu, pierwszego wystąpienia
+lista.append("Zenek")
+lista.append("Zenek")
+print(lista)  # ['Radek', 'Marcin', 'Zenek', 'Tomek', 'Mikołaj', 'Ania', 'Magda', 'Zenek', 'Zenek']
+lista.remove("Zenek")
+print(lista)  # ['Radek', 'Marcin', 'Tomek', 'Mikołaj', 'Ania', 'Magda', 'Zenek', 'Zenek']
+print(lista.remove("Zenek"))  # None
+print(lista)  # ['Radek', 'Marcin', 'Tomek', 'Mikołaj', 'Ania', 'Magda', 'Zenek']
+
+# usunięcie po indeksie, zwraca co usunełą
+print(lista.pop(5))  # Magda
+print(lista)
