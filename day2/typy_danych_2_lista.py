@@ -1,6 +1,7 @@
 # Kolekcje
 # lista - przechowuje wiele danych, różnego typu
 # zachowuje kolejnść przy dodawaniu elementów
+from day1.formaty import liczba
 
 # pusta lista
 lista = []  # nawiasy kwadratowe są charakterystyczne dla listy
@@ -79,3 +80,68 @@ print(lista.pop(5))  # Magda
 print(lista)
 print(lista.pop(-2))  # Ania
 print(lista.pop())  # Zenek, ostatni element z listy
+
+a = 1
+b = 2
+a = b
+print(a, b)  # 2 2
+b = 7
+print(a, b)  # 2 7
+
+lista_2 = lista  # a = b, kopia refernecji (adresu w pamięci)
+lista_copy = lista.copy()  # kopia elementów listy
+print(lista_2, lista)
+# ['Radek', 'Marcin', 'Tomek', 'Mikołaj'] ['Radek', 'Marcin', 'Tomek', 'Mikołaj']
+lista.clear()  # usunięcie elementów listy lista, b = 7
+print(lista_2, lista)  # [] []
+# obie listy wskazują na ten sam adres w pamięci
+print(id(lista_2))  # 2630006149504
+print(id(lista))  # 2630006149504
+
+print(lista_copy)  # ['Radek', 'Marcin', 'Tomek', 'Mikołaj']
+print(id(lista_copy))  # 2630009552640
+
+liczby = [54, 999, 34, 22, 12.34, 687]
+print(liczby)  # [54, 999, 34, 22, 12.34, 687]
+print(type(liczby))  # <class 'list'>
+
+liczby.sort()  # sortowanie listy (zmienia bazową)
+print(liczby)  # [12.34, 22, 34, 54, 687, 999], zamieniana jest bazowa lista
+
+liczby = [54, 999, 34, 22, 12.34, 687, "A"]
+print(liczby)  # [54, 999, 34, 22, 12.34, 687, 'A']
+
+# liczby.sort()  # TypeError: '<' not supported between instances of 'str' and 'int'
+
+lista_osob = ['radek', 'ola', 'lena', 'agata', 'zenek']
+lista_osob.sort()
+print(lista_osob)  # ['agata', 'lena', 'ola', 'radek', 'zenek']
+
+lista_osob.reverse()  # odwrócenie listy
+print(lista_osob)  # ['zenek', 'radek', 'ola', 'lena', 'agata']
+
+lista_osob.sort(reverse=True)  # sortowanie i odwrócenie
+print(lista_osob)  # ['zenek', 'radek', 'ola', 'lena', 'agata']
+
+liczby[3] = 666
+print(liczby[0:3])  # [54, 999, 34]
+print(liczby[-2])  # 687
+print(liczby)  # [54, 999, 34, 666, 12.34, 687, 'A']
+
+print(liczby.pop(2))  # usuniecie elemntu o indeksie 2, liczba 34
+liczby.remove(54)  # usuniecie liczby 54 z listy
+print(liczby)  # [999, 666, 12.34, 687, 'A']
+
+del liczby
+# print(liczby)  # NameError: name 'liczby' is not defined. Did you mean: 'liczba'?
+
+tekst = "Pyt hon."
+lista1 = list(tekst)
+print(lista1)  # ['P', 'y', 't', ' ', 'h', 'o', 'n', '.'] rozpakowanie sekwencji
+
+lista2 = [tekst]
+print(lista2)  # ['Pyt hon.']
+
+krotka = tuple(lista_copy)  # tuple() rzutownie na krotkę (tuplę)
+print(type(krotka))  # <class 'tuple'>
+print(krotka)  # ('Radek', 'Marcin', 'Tomek', 'Mikołaj')
