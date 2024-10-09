@@ -44,3 +44,19 @@ else:  # w przeciwym przypadku, zachowanie domyślne
 # zadać pytanie
 # pobrać odpowiedź od użytkownika
 # w zależności od odowiedzi wypisać wynik pozytywny/negatywny
+# fuzz buzz
+
+punkty = 0
+odp = input("Podaj rok Chrztu Polski")  # str
+if odp == '966':
+    print("Brawo")
+    punkty += 1  # punkty = punkty + 1
+else:
+    print("Musisz się uczyć dalej")
+
+print("Punkty", punkty)
+# spam += 1    spam = spam + 1
+# spam -= 1    spam = spam - 1
+# spam *= 1    spam = spam * 1
+# spam /= 1    spam = spam / 1
+# spam %= 1    spam = spam % 1
