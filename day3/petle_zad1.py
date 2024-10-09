@@ -197,3 +197,9 @@ for i, (l, w) in enumerate(zip(ludzie, wiek)):
 # 1 Tomek 55
 # 2 Zenek 32
 # 3 Magda 29
+for i, (l, w) in enumerate(zip(ludzie, wiek), start=1):
+    print(i, l, w)
+# 1 Radek 44
+# 2 Tomek 55
+# 3 Zenek 32
+# 4 Magda 29
