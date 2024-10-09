@@ -85,3 +85,18 @@ for i in range(10, 0, -2):  # start, stop, krok
 
 for i in range(-10, 0):
     print(i)
+
+for c in lista3:
+    if c == 2:
+        c += 1 # c = c + 1
+        print("Tylko dla c = 2")
+        print(c)
+    print("Przy każdym elemencie pętli")
+# Przy każdym elemencie pętli
+# Tylko dla c = 2
+# 3
+# Przy każdym elemencie pętli
+# Przy każdym elemencie pętli
+# Przy każdym elemencie pętli
+# Przy każdym elemencie pętli
+
