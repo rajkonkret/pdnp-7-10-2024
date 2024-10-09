@@ -1,6 +1,9 @@
 # pętle - daje daje nam mozliwosc wykonania tego samego kodu wielokrotnie
 # for - pętla iteracyjna
 import random
+from turtledemo.penrose import start
+
+from day1.teksty import encode_s
 
 # służy do działanai na liczbach losowych
 
@@ -88,7 +91,7 @@ for i in range(-10, 0):
 
 for c in lista3:
     if c == 2:
-        c += 1 # c = c + 1
+        c += 1  # c = c + 1
         print("Tylko dla c = 2")
         print(c)
     print("Przy każdym elemencie pętli")
@@ -100,3 +103,48 @@ for c in lista3:
 # Przy każdym elemencie pętli
 # Przy każdym elemencie pętli
 
+imiona = ['Radek', 'Tomek', 'Zenek', 'Ania']
+print(imiona)  # ['Radek', 'Tomek', 'Zenek', 'Ania']
+print(type(imiona))  # <class 'list'>
+
+for p in imiona:
+    print(p)
+# Radek
+# Tomek
+# Zenek
+# Ania
+
+# 0 Radek
+for i in imiona:
+    print(imiona.index(i), i)
+# 0 Radek
+# 1 Tomek
+# 2 Zenek
+# 3 Ania
+
+for i in range(len(imiona)):  # range(4) -> 0123
+    print(i, imiona[i])
+# 0 Radek
+# 1 Tomek
+# 2 Zenek
+# 3 Ania
+
+# enumerate() - numeruje i zwraca elelmnt kolekcji z numerem
+for p in enumerate(imiona):
+    print(p)
+# (0, 'Radek') -> 0 Radek
+# (1, 'Tomek')
+# (2, 'Zenek')
+# (3, 'Ania')
+for i, o in enumerate(imiona):
+    print(i, o)
+# 0 Radek
+# 1 Tomek
+# 2 Zenek
+# 3 Ania
+for i, o in enumerate(imiona, start=1):  # start=1 - numerujemy od 1
+    print(i, o)
+# 1 Radek
+# 2 Tomek
+# 3 Zenek
+# 4 Ania
