@@ -12,8 +12,8 @@ print(6 / 9)  # 0.6666666666666666
 try:
     # print(5 / 0)
     # print("A" + 9)
-    print(int("A"))
-    # raise KeyError("Bład klucza")
+    # print(int("A"))
+    raise KeyError("Bład klucza")  # rzucamy wyjątek jawnie
     wynik = 90 / 34
 except ZeroDivisionError:
     print("Nie dziel przez zero")
@@ -21,7 +21,7 @@ except TypeError:
     print("Bład typu")
 except ValueError:
     print("Bład wartości")
-except Exception as e:
+except Exception as e:  # przechwytuje pozostałe wyjątki, e przechwytuje komunikat błedu
     print("Błąd", e)
 else:  # gdy nie ma błedu
     print("Wynik", wynik)
@@ -45,5 +45,9 @@ print("Program nadal działa")
 # Zakończyłem obliczenia
 # Program nadal działa
 # Bład wartości
+# Zakończyłem obliczenia
+# Program nadal działa
+# 0.6666666666666666
+# Błąd 'Bład klucza'
 # Zakończyłem obliczenia
 # Program nadal działa
