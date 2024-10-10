@@ -2,6 +2,9 @@
 # skrócony zakres funkcji
 # zwraca wynik
 # lambda jako funkcja anonimowa
+from day4.csv_zad1 import filename
+
+
 def odejmij(a, b):
     return a - b
 
@@ -51,3 +54,23 @@ print(f"Zastosowanie map(): {list(map(lambda x: x * 4, lista))}")
 print(f"Zastosowanie map(): {list(map(lambda x: x * 14, lista))}")
 # Zastosowanie map(): [4, 8, 12, 40, 80, 120, 240, 400, 1200, 2000]
 # Zastosowanie map(): [14, 28, 42, 140, 280, 420, 840, 1400, 4200, 7000]
+
+# filtrowanie danych
+l3 = []
+for i in lista:
+    if i < 20:
+        l3.append(i)
+print(l3)  # [1, 2, 3, 10]
+
+# filter() - filtrowanie danych
+print(f"Zastosowanie filter: {list(filter(lambda x: x < 20, lista))}")
+print(f"Zastosowanie filter: {list(filter(lambda x: x < 50, lista))}")
+print(f"Zastosowanie filter: {list(filter(lambda x: x > 100, lista))}")
+# Zastosowanie filter: [1, 2, 3, 10]
+# Zastosowanie filter: [1, 2, 3, 10, 20, 30]
+# Zastosowanie filter: [300, 500]
+# x > 10 and x < 300
+print(f"Zastosowanie filter: {list(filter(lambda x: x > 10 and x < 300, lista))}")
+# Zastosowanie filter: [20, 30, 60, 100]
+print(f"Zastosowanie filter: {list(filter(lambda x: 10 < x < 300, lista))}")
+# Zastosowanie filter: [20, 30, 60, 100]
