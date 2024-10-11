@@ -126,3 +126,4 @@ sololearn
 (.venv) PS C:\Users\CSComarch\PycharmProjects\pdnp-7-10-2024> pip install -r .\requirements.txt
 
 pip install pyinstaller
+pyinstaller --onefile --noconsole .\day5\okno1.py
