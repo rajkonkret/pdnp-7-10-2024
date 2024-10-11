@@ -121,3 +121,8 @@ https://www.w3schools.com/python/
 https://www.hackerrank.com/domains/python
 https://pl.altapps.net/soft/hackerrank-com
 sololearn
+
+(.venv) PS C:\Users\CSComarch\PycharmProjects\pdnp-7-10-2024> pip freeze > requirements.txt
+(.venv) PS C:\Users\CSComarch\PycharmProjects\pdnp-7-10-2024> pip install -r .\requirements.txt
+
+pip install pyinstaller
