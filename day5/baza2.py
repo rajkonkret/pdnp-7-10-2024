@@ -28,7 +28,7 @@ try:
     SELECT * FROM developers;
     """
     for row in c.execute(select):
-        print(row) # (1, 'Radek', 10000.0)
+        print(row)  # (1, 'Radek', 10000.0)
 
 except sqlite3.Error as e:
     print("Bład bazy", e)
