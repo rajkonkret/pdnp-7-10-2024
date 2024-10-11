@@ -1,0 +1,29 @@
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+# Ustawienia SMTP
+smtp_server = ""
+smtp_port = 587  # Dla Gmaila
+email_address = ""
+password = ""
+to = ""
+
+# Stworzenie wiadomości
+wiadomosc = MIMEMultipart()
+wiadomosc["From"] = email_address
+wiadomosc["To"] = to
+wiadomosc["Subject"] = "Dodatkowe życzenia"
+
+tresc = "Wszystkiego najlepszego z okazji urodzin!"
+wiadomosc.attach(MIMEText(tresc, "plain"))
+
+# Logowanie do serwera i wysyłanie e-maila
+try:
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
+        server.starttls()  # Start TLS encryption
+        server.login(email_address, password)
+        server.sendmail(email_address, to, wiadomosc.as_string())
+        print("E-mail został wysłany!")
+except Exception as e:
+    print(f"Błąd: {e}")
