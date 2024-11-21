@@ -1,5 +1,5 @@
 # funkcje lambda
-# skrócony zakres funkcji
+# skrócony zapis funkcji
 # zwraca wynik
 # lambda jako funkcja anonimowa
 from day4.csv_zad1 import filename
